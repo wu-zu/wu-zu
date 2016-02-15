@@ -69,9 +69,9 @@
 
     <!-- Template engine -->
     <dependency>
-      <groupId>org.apache.tiles</groupId>
-      <artifactId>tiles-jsp</artifactId>
-      <version>3.0.5</version>
+      <groupId>org.sitemesh</groupId>
+      <artifactId>sitemesh</artifactId>
+      <version>3.0.1</version>
     </dependency>
   </dependencies>
 </project>
