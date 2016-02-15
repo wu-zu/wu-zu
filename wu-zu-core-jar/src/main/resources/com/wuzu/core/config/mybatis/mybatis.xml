@@ -9,11 +9,11 @@
   </settings>
 
   <typeAliases>
-    <typeAlias type="com.wuzu.home.vo.Menu" /> <!-- 소문자(menu)로 등록됨. -->
-    <!-- <package name="com.wuzu.home.app.*.domain" /> -->
+    <!-- <typeAlias type="com.wuzu.home.vo.Menu" /> --> <!-- 소문자(menu)로 등록됨. -->
+    <package name="com.wuzu.home.app.*.domain" />
   </typeAliases>
 
   <mappers>
-    <mapper resource="com/wuzu/home/dao/MenuMapper.xml" />
+    <!-- <mapper resource="com/wuzu/home/dao/MenuMapper.xml" /> -->
   </mappers>
 </configuration>
