@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+  <settings>
+    <setting name="cacheEnabled" value="true" />
+    <setting name="useGeneratedKeys" value="true" />
+    <setting name="mapUnderscoreToCamelCase" value="true" />
+  </settings>
+
+  <typeAliases>
+    <typeAlias type="com.wuzu.home.vo.Menu" /> <!-- 소문자(menu)로 등록됨. -->
+    <!-- <package name="com.wuzu.home.app.*.domain" /> -->
+  </typeAliases>
+
+  <mappers>
+    <mapper resource="com/wuzu/home/dao/MenuMapper.xml" />
+  </mappers>
+</configuration>

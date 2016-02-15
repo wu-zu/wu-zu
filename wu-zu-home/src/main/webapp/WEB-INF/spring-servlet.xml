@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:context="http://www.springframework.org/schema/context"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:mvc="http://www.springframework.org/schema/mvc"
+  xsi:schemaLocation="http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd">
+  
+  <!-- for Static resources -->
+  <mvc:default-servlet-handler />
+  
+  <context:component-scan base-package="com.wuzu.home" />
+  
+  <!-- Handler Adapter -->
+  <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+    <property name="messageConverters">
+      <list>
+        <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter" />
+      </list>
+    </property>
+  </bean>
+  
+  <!-- Handler Intercepter -->
+  <bean id="logInterceptor" class="com.wuzu.home.interceptor.LogInterceptor" />
+  <bean id="commonInterceptor" class="com.wuzu.home.interceptor.CommonInterceptor" />
+  
+  <!-- Handler Mapping -->
+  <bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping">
+    <property name="order" value="1" /> <!-- 기본 3가지 핸들러 매핑에서 DefaultAnnotationHandlerMapping이 3순위임. -->
+    <property name="interceptors">
+      <list>
+        <ref bean="logInterceptor" />
+        <ref bean="commonInterceptor" />
+      </list>
+    </property>
+  </bean>
+  <!-- 
+   [org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping@77613e5d, 
+    org.springframework.web.servlet.handler.SimpleUrlHandlerMapping@1d812bea, 
+    org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping@1c7f1175]
+
+   SimpleUrlHandlerMapping -> DefaultServletHttpRequestHandler
+   : 그래서 / 매핑이 자꾸 DefaultServlet으로 가는 것이었다.
+   -->
+  
+  <!-- View Resolver -->
+  <bean class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
+    <property name="viewResolvers">
+      <list>
+        <bean class="org.springframework.web.servlet.view.tiles3.TilesViewResolver" />
+        <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+          <property name="prefix" value="/WEB-INF/view/" />
+          <property name="suffix" value=".jsp" />
+        </bean>
+      </list>      
+    </property>
+    <property name="defaultViews">
+      <list>
+        <bean class="org.springframework.web.servlet.view.json.MappingJackson2JsonView" />
+      </list>
+    </property>
+  </bean>
+  
+  <bean class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
+    <property name="definitions">
+      <list>
+        <value>/WEB-INF/view/tiles/tiles.xml</value>
+      </list>
+    </property>
+  </bean>
+</beans>

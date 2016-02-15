@@ -1,0 +1,29 @@
+[
+{
+    "id" : 1,
+    "text" : "file 1"
+},
+{
+    "id" : 2,
+    "text" : "file 2",
+    "iconCls" : "icon-save"
+},
+{
+    "id" : 3,
+    "text" : "folder 1",
+    "children" : [
+        {
+            "text" : "file 11",
+            "checked" : true
+        },
+        {
+            "text" : "file 12",
+            "attributes" : {
+                "url" : "/demo/book/abc",
+                "price" : 100
+            }
+        }
+    ],
+    "state" : "closed"
+}
+]

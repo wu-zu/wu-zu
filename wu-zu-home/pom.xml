@@ -1,0 +1,77 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  
+  <parent>
+    <groupId>com.wu-zu</groupId>
+    <artifactId>wu-zu</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  
+  <artifactId>wu-zu-home</artifactId>
+  <packaging>war</packaging>
+  
+  <name>WU-ZU's home</name>
+  <description>Community, Entry point of development</description>
+  
+  <dependencies>
+    <!-- WU-ZU -->
+    <dependency>
+      <groupId>com.wu-zu</groupId>
+      <artifactId>wu-zu-core-jar</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+    </dependency>
+    
+    <!-- Servlet -->
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <version>3.1.0</version> <!-- Project Facets의 Dynamic Web Module 버젼을 3.1로 설정 -->
+      <scope>provided</scope>
+    </dependency>
+
+    <!-- EL -->
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>jsp-api</artifactId>
+      <version>2.0</version>
+      <scope>provided</scope>
+      <exclusions>
+        <exclusion>
+          <groupId>javax.servlet</groupId>
+          <artifactId>servlet-api</artifactId> <!-- 2.4 버젼에 대한 의존관계 제거 -->
+        </exclusion>
+      </exclusions>
+    </dependency>
+
+    <!-- JSTL -->
+    <dependency>
+      <groupId>org.apache.taglibs</groupId>
+      <artifactId>taglibs-standard-spec</artifactId>
+      <version>1.2.5</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.taglibs</groupId>
+      <artifactId>taglibs-standard-impl</artifactId>
+      <version>1.2.5</version>
+    </dependency>
+
+    <!-- Spring Framework -->
+    <dependency>
+      <groupId>org.springframework</groupId> <!-- ContextLoaderListener -->
+      <artifactId>spring-web</artifactId>
+      <version>${spring.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-webmvc</artifactId> <!-- DispatcherServlet -->
+      <version>${spring.version}</version>
+    </dependency>
+
+    <!-- Template engine -->
+    <dependency>
+      <groupId>org.apache.tiles</groupId>
+      <artifactId>tiles-jsp</artifactId>
+      <version>3.0.5</version>
+    </dependency>
+  </dependencies>
+</project>

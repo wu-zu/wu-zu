@@ -1,0 +1,58 @@
+@CHARSET "UTF-8";
+
+/** Smartphone - No media queries **/
+#we > article {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+#we > article > img {
+  order: 1;
+  margin: 0 auto; /* size fix, horizontal align */
+}
+
+#we > article > h1 {
+  order: 2;
+  margin: 20px auto;
+  font-size: 1.4em;
+}
+
+#we > article > dl {
+  order: 3;
+  margin: 0 auto;
+}
+
+#we > article dt {
+  display: inline-block;
+  width: 50px;
+}
+
+#we > article dd {
+  display: inline;
+  margin-left: 10px;
+}
+
+#we > article dd:after {
+  content: "";
+  display: block;
+}
+
+
+/** Tablet **/
+@media only screen and (min-width: 768px) { /* and (max-width: 1024px) */
+  #we > article {
+    float: left;
+    width: 50%;
+  }
+  
+  #we > h2 {
+    clear: left;
+  }
+}
+
+
+/** Laptop **/
+@media only screen and (min-width: 1025px) {
+  
+}
