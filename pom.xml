@@ -8,11 +8,13 @@
   
   <modules>
     <module>wu-zu-core</module>
+    <module>wu-zu-core-jar</module>
     <module>wu-zu-core-web</module>
+    <module>wu-zu-core-web-jar</module>
     <module>wu-zu-home</module>
   </modules>
   
-  <name>WU-ZU's maven build</name>
+  <name>WU-ZU's pom</name>
   <description>WU-ZU's maven build management</description>
   <url>http://www.wu-zu.com</url>
   <developers>

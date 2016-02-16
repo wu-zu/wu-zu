@@ -5,13 +5,13 @@
     <groupId>com.wu-zu</groupId>
     <artifactId>wu-zu</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <relativePath>../pom.xml</relativePath>
   </parent>
   
   <artifactId>wu-zu-core</artifactId>
   <packaging>pom</packaging>
   
-  <name>WU-ZU's core</name>
-  <description>Common jar</description>
+  <name>WU-ZU's core pom</name>
   
   <dependencies>
     <!-- Spring Framework -->

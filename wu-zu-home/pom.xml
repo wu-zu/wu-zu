@@ -11,14 +11,14 @@
   <artifactId>wu-zu-home</artifactId>
   <packaging>war</packaging>
   
-  <name>WU-ZU's home</name>
+  <name>WU-ZU's home war</name>
   <description>Community, Entry point of development</description>
   
   <dependencies>
     <!-- WU-ZU -->
     <dependency>
       <groupId>com.wu-zu</groupId>
-      <artifactId>wu-zu-core-web</artifactId>
+      <artifactId>wu-zu-core-web-jar</artifactId>
       <version>0.0.1-SNAPSHOT</version>
     </dependency>
     

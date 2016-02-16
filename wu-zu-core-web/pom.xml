@@ -11,17 +11,16 @@
   <artifactId>wu-zu-core-web</artifactId>
   <packaging>pom</packaging>
   
-  <name>WU-ZU's core web</name>
-  <description>Common web jar</description>
+  <name>WU-ZU's core web pom</name>
   
   <dependencies>
     <!-- WU-ZU -->
     <dependency>
       <groupId>com.wu-zu</groupId>
-      <artifactId>wu-zu-core</artifactId>
+      <artifactId>wu-zu-core-jar</artifactId>
       <version>0.0.1-SNAPSHOT</version>
     </dependency>
-    
+  
     <!-- Servlet -->
     <dependency>
       <groupId>javax.servlet</groupId>
