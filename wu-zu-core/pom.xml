@@ -7,10 +7,10 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   
-  <artifactId>wu-zu-core-jar</artifactId>
-  <packaging>jar</packaging>
+  <artifactId>wu-zu-core</artifactId>
+  <packaging>pom</packaging>
   
-  <name>WU-ZU's core jar</name>
+  <name>WU-ZU's core</name>
   <description>Common jar</description>
   
   <dependencies>
