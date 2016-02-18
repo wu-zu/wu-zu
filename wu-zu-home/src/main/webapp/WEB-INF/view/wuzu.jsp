@@ -15,8 +15,8 @@
   <p>우리는 다음 항목을 개발 전반에 걸쳐 적용하고자 합니다.</p>
   <ul>
     <li>TiDD</li>
-    <li>TDD</li>
     <li>CBD</li>
+    <li>TDD</li>
     <li>CI</li>
     <li>계속...</li>
   </ul>
@@ -26,7 +26,7 @@
   <ul>
     <li>Issue and Project tracking : <a href="http://redmine.wu-zu.com" target="_blank">Redmine</a></li>
     <li>Version Control System : <a href="https://github.com/wu-zu" target="_blank">GitHub</a></li>
-    <li>Continuous Integration : <a href="http://jenkins.wu-zu.com" target="_blank">Jenkins</a></li>
+    <li>Continuous Integration : Jenkins</li>
     <li>계속...</li>
   </ul>
 </aside>

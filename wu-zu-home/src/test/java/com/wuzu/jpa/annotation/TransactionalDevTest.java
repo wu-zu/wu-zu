@@ -15,7 +15,7 @@ import java.lang.annotation.Target;
  */
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
-@ContextConfiguration("/applicationContext-dev.xml")
+@ContextConfiguration("/com/wuzu/spring/config/applicationContext-dev.xml")
 @ActiveProfiles("dev")
 @Transactional
 @Sql({"/com/wuzu/jpa/script/create-db.sql","/com/wuzu/jpa/script/insert-data.sql"})

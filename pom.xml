@@ -9,8 +9,6 @@
   <modules>
     <module>wu-zu-core</module>
     <module>wu-zu-core-jar</module>
-    <module>wu-zu-core-web</module>
-    <module>wu-zu-core-web-jar</module>
     <module>wu-zu-home</module>
   </modules>
   
