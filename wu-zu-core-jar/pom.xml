@@ -3,13 +3,22 @@
   
   <parent>
     <groupId>com.wu-zu</groupId>
-    <artifactId>wu-zu-core</artifactId>
+    <artifactId>wu-zu</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <relativePath>../wu-zu-core/pom.xml</relativePath>
+    <relativePath>../pom.xml</relativePath>
   </parent>
   
   <artifactId>wu-zu-core-jar</artifactId>
   <packaging>jar</packaging>
   
   <name>WU-ZU's core jar</name>
+  
+  <dependencies>
+    <!-- WU-ZU -->
+    <dependency>
+      <groupId>com.wu-zu</groupId>
+      <artifactId>wu-zu-core</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+    </dependency>
+  </dependencies>
 </project>

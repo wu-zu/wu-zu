@@ -3,13 +3,13 @@
   
   <parent>
     <groupId>com.wu-zu</groupId>
-    <artifactId>wu-zu-core</artifactId>
+    <artifactId>wu-zu</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <relativePath>../wu-zu-core/pom.xml</relativePath>
+    <relativePath>../pom.xml</relativePath>
   </parent>
   
   <artifactId>wu-zu-core-web</artifactId>
-  <packaging>pom</packaging>
+  <packaging>jar</packaging>
   
   <name>WU-ZU's core web pom</name>
   
@@ -20,7 +20,7 @@
       <artifactId>wu-zu-core-jar</artifactId>
       <version>0.0.1-SNAPSHOT</version>
     </dependency>
-  
+    
     <!-- Servlet -->
     <dependency>
       <groupId>javax.servlet</groupId>

@@ -9,7 +9,7 @@
   </parent>
   
   <artifactId>wu-zu-core</artifactId>
-  <packaging>pom</packaging>
+  <packaging>jar</packaging>
   
   <name>WU-ZU's core pom</name>
   
