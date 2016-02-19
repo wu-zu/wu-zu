@@ -1,10 +1,9 @@
 package com.wuzu.jpa.service;
 
-import com.wuzu.jpa.domain.MenuVo;
-
 import java.util.List;
+
 import com.mysema.query.types.Predicate;
-import com.wuzu.jpa.domain.QMenuVo;
+import com.wuzu.jpa.domain.MenuVo;
 
 /**
  * @author Hyungchae Kim
@@ -22,5 +21,4 @@ public interface MenuCrudService {
     MenuVo findById(Integer id);
 
     MenuVo update(MenuVo menuVo);
-
 }

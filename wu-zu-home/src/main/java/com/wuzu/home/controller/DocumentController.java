@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.wuzu.home.service.MenuService;
-import com.wuzu.home.vo.Menu;
+import com.wuzu.web.ui.menu.vo.Menu;
 
 /**
  * @author Gahngha Ryu

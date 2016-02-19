@@ -25,14 +25,14 @@ $('#menu-tree').tree({
     url : '<c:url value="/energy/menu" />',
     method : 'get',
     loadFilter : function(data) {
-      
+        
         for (var i = 0; i < data.length; ++i) {
-    
+            
             var menu = data[i];
             
             menu.text = menu.name;
         }
-          
+        
         return data;
     }
 });

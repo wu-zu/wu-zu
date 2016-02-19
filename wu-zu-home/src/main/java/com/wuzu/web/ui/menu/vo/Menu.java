@@ -1,4 +1,6 @@
-package com.wuzu.home.vo;
+package com.wuzu.web.ui.menu.vo;
+
+import java.util.List;
 
 import lombok.Data;
 
@@ -10,6 +12,9 @@ public class Menu {
 
     private int id;
     private String name;
+    
+    private int parentId;
+    private List<Menu> children;
     
     private boolean isOpened;
 }

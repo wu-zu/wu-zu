@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
-import com.wuzu.home.vo.Menu;
+import com.wuzu.web.ui.menu.vo.Menu;
 
 /**
  * @author Gahngha Ryu
