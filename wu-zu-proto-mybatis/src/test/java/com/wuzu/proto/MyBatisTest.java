@@ -1,4 +1,4 @@
-package com.wuzu.home.mybatis;
+package com.wuzu.proto;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.not;
@@ -16,13 +16,12 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  * @author Gahngha Ryu
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration("/com/wuzu/home/config/spring/applicationContext.xml")
+@ContextConfiguration("/com/wuzu/proto/config/spring/applicationContext.xml")
 public class MyBatisTest {
     
     @Autowired
     private SqlSession sqlSession;
     
-//    @Ignore
     @Test
     public void connection() {
 
