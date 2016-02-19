@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.wuzu.home.dao.MenuMapper;
+import com.wuzu.home.service.MenuService;
 import com.wuzu.home.vo.Menu;
 
 /**
@@ -19,13 +19,13 @@ import com.wuzu.home.vo.Menu;
 public class DocumentController {
     
     @Autowired
-    private MenuMapper menuMapper;
+    private MenuService menuService;
     
     @RequestMapping(path = "/menu", method = RequestMethod.GET)
     @ResponseBody
     public List<Menu> allMenus() {
         
-        return menuMapper.selectAllMenus();
+        return menuService.selectAllMenus();
     }
     
 //    @ExceptionHandler
