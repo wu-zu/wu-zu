@@ -4,12 +4,9 @@
 .settings
 
 # IntelliJ IDEA
-/.idea
-/wu-zu-core-jar/wu-zu-core-jar.iml
-/wu-zu-core-web/wu-zu-core-web.iml
-/wu-zu-home/wu-zu-home.iml
-/wu-zu.iml
-/home.iml
+*.idea
+*.iml
+
 
 # Maven
 target
