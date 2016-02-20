@@ -11,8 +11,8 @@
   <context-param>
     <param-name>contextConfigLocation</param-name>
     <param-value>
-      classpath:com/wuzu/core/config/spring/applicationContext.xml,
-      classpath:com/wuzu/home/config/spring/applicationContext.xml
+      classpath:com/wuzu/core/config/spring/context-core.xml,
+      classpath:com/wuzu/home/config/spring/context-home.xml
     </param-value>
   </context-param>
   <listener>

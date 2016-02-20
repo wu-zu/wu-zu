@@ -21,7 +21,7 @@ import com.wuzu.proto.vo.Menu;
  * @author Gahngha Ryu
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration("/com/wuzu/proto/config/spring/applicationContext.xml")
+@ContextConfiguration("/com/wuzu/proto/config/spring/context-proto.xml")
 public class MyBatisTest {
     
     @Autowired

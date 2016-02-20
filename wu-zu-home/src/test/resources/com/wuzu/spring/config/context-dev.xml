@@ -8,5 +8,5 @@
   
   <context:component-scan base-package="com.wuzu.*" />
 
-  <import resource="applicationContext-dev-jpa.xml" />
+  <import resource="context-dev-jpa.xml" />
 </beans>
