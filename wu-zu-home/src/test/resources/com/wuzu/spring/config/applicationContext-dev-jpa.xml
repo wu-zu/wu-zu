@@ -10,7 +10,7 @@
 		http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa.xsd"
        >
 
-    <context:component-scan base-package="com.wuzu.jpa"/>
+    <context:component-scan base-package="com.wuzu.*"/>
 
     <tx:annotation-driven/>
 
@@ -36,7 +36,7 @@
     <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
         <property name="dataSource" ref="hikariDataSource"/>
         <property name="jpaVendorAdapter" ref="hibernateJpaVendorAdapter"/>
-        <property name="packagesToScan" value="com.wuzu.jpa"/>
+        <property name="packagesToScan" value="com.wuzu.*"/>
         <property name="jpaProperties">
             <props>
                 <prop key="hibernate.dialect">${hibernate.dialect}</prop>
@@ -48,6 +48,6 @@
         </property>
     </bean>
 
-    <jpa:repositories base-package="com.wuzu.jpa"/>
+    <jpa:repositories base-package="com.wuzu.*"/>
 
 </beans>
