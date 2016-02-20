@@ -9,7 +9,7 @@
 
   <tx:annotation-driven />
   
-  <context:property-placeholder location="classpath:application-dev.properties" />
+  <context:property-placeholder location="classpath:home-dev.properties" />
 
   <bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
     <property name="driverClassName" value="${db.driver}" />
