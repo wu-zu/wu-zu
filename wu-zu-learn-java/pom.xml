@@ -11,6 +11,8 @@
   <artifactId>wu-zu-learn-java</artifactId>
   <packaging>jar</packaging>
   
+  <name>WU-ZU's java learning test</name>
+    
   <dependencies>
 	<!-- WU-ZU -->
     <dependency>

@@ -1,10 +1,7 @@
 package com.wuzu.jpa.test;
 
-import com.wuzu.jpa.annotation.TransactionalDevTest;
-import com.wuzu.home.domain.Menu;
-import com.wuzu.home.domain.QMenu;
-import com.wuzu.web.ui.menu.service.MenuCrudService;
-import lombok.extern.slf4j.Slf4j;
+import static org.assertj.core.api.Assertions.assertThat;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -12,8 +9,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.mysema.query.types.Predicate;
+import com.wuzu.jpa.annotation.TransactionalDevTest;
+import com.wuzu.web.ui.menu.domain.Menu;
+import com.wuzu.web.ui.menu.domain.QMenu;
+import com.wuzu.web.ui.menu.service.MenuCrudService;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * @author Hyungchae Kim

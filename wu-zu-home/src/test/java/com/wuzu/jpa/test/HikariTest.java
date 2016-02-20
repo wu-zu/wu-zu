@@ -44,5 +44,4 @@ public class HikariTest {
     public void countRowsInMenuTable() {
         assertThat(JdbcTestUtils.countRowsInTable(this.jdbcTemplate, "MENU")).isNotNull().isEqualTo(5);
     }
-
 }

@@ -1,9 +1,9 @@
 package com.wuzu.web.ui.menu.service;
 
-import com.mysema.query.types.Predicate;
-import com.wuzu.home.domain.Menu;
-
 import java.util.List;
+
+import com.mysema.query.types.Predicate;
+import com.wuzu.web.ui.menu.domain.Menu;
 
 /**
  * @author Hyungchae Kim

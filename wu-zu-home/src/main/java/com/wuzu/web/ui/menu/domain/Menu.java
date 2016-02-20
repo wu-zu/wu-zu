@@ -1,9 +1,16 @@
-package com.wuzu.home.domain;
+package com.wuzu.web.ui.menu.domain;
+
+import java.util.List;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import javax.persistence.*;
 
 /**
  * @author HyungChae Kim
@@ -20,8 +27,10 @@ public class Menu {
 
     @Column(name = "name",nullable = false,length = 30)
     private String name;
-
+    
+//    private int parentId;
+//    private List<Menu> children;
+    
     @Column(name = "is_opened",nullable = false)
     private boolean isOpened;
-
 }

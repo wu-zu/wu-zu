@@ -18,5 +18,5 @@ import java.lang.annotation.Target;
 @ContextConfiguration("/com/wuzu/spring/config/applicationContext-dev.xml")
 @ActiveProfiles("dev")
 @Transactional
-@Sql({"/com/wuzu/jpa/script/create-db.sql","/com/wuzu/jpa/script/insert-data.sql"})
+@Sql({"/com/wuzu/jpa/sql/create-db.sql","/com/wuzu/jpa/sql/insert-data.sql"})
 public @interface TransactionalDevTest {}

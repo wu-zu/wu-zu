@@ -11,6 +11,8 @@
   <artifactId>wu-zu-learn-spring</artifactId>
   <packaging>jar</packaging>
   
+  <name>WU-ZU's spring learning test</name>
+  
   <dependencies>
     <!-- WU-ZU -->
     <dependency>

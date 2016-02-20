@@ -8,9 +8,10 @@
     <relativePath>../pom.xml</relativePath>
   </parent>
   
-  <groupId>wu-zu-proto-mybatis</groupId>
   <artifactId>wu-zu-proto-mybatis</artifactId>
   <packaging>jar</packaging>
+  
+  <name>WU-ZU's mybatis prototype</name>
   
   <dependencies>
     <!-- WU-ZU -->

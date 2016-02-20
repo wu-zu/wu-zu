@@ -11,6 +11,8 @@
   <artifactId>wu-zu-mybatis</artifactId>
   <packaging>jar</packaging>
   
+  <name>WU-ZU's mybatis pom</name>
+  
   <dependencies>
     <!-- MyBatis -->
     <dependency>
