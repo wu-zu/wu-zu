@@ -12,8 +12,11 @@
     <module>wu-zu-mybatis</module>
     <module>wu-zu-proto-mybatis</module>
     
-<!--     <module>wu-zu-core-web</module> -->
-<!--     <module>wu-zu-home</module> -->
+    <module>wu-zu-core-web</module>
+    <module>wu-zu-home</module>
+    
+    <module>wu-zu-learn-java</module>
+    <module>wu-zu-learn-spring</module>
   </modules>
   
   <name>WU-ZU's pom</name>

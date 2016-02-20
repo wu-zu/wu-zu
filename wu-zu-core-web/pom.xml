@@ -17,7 +17,7 @@
     <!-- WU-ZU -->
     <dependency>
       <groupId>com.wu-zu</groupId>
-      <artifactId>wu-zu-core-jar</artifactId>
+      <artifactId>wu-zu-core</artifactId>
       <version>0.0.1-SNAPSHOT</version>
     </dependency>
     
