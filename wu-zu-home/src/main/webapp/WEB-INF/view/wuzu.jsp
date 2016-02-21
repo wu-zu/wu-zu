@@ -26,7 +26,7 @@
   <ul>
     <li>Issue and Project tracking : <a href="http://redmine.wu-zu.com" target="_blank">Redmine</a></li>
     <li>Version Control System : <a href="https://github.com/wu-zu" target="_blank">GitHub</a></li>
-    <li>Continuous Integration : Jenkins</li>
+    <li>Continuous Integration : <a href="http://jenkins.wu-zu.com" target="_blank">Jenkins</a></li>
     <li>계속...</li>
   </ul>
 </aside>
