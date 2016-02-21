@@ -12,7 +12,7 @@ import com.mysema.query.types.Predicate;
 import com.wuzu.jpa.annotation.TransactionalDevTest;
 import com.wuzu.web.ui.menu.domain.Menu;
 import com.wuzu.web.ui.menu.domain.QMenu;
-import com.wuzu.web.ui.menu.service.MenuCrudService;
+import com.wuzu.web.ui.menu.service.MenuService;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -25,7 +25,7 @@ import lombok.extern.slf4j.Slf4j;
 public class MenuCrudTest {
 
     @Autowired
-    public MenuCrudService menuService;
+    public MenuService menuService;
 
     @Before
     public void setUp() {}

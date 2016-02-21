@@ -9,6 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.mysema.query.types.Predicate;
 import com.wuzu.web.ui.menu.domain.Menu;
+import com.wuzu.web.ui.menu.domain.QMenu;
 import com.wuzu.web.ui.menu.repository.MenuRepository;
 
 import lombok.extern.slf4j.Slf4j;
@@ -18,7 +19,7 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 @Service
-public class RepositoryMenuService implements MenuCrudService {
+public class RepositoryMenuService implements MenuService {
 
     private MenuRepository repository;
 
@@ -84,5 +85,17 @@ public class RepositoryMenuService implements MenuCrudService {
         repository.flush();
         log.info("Updated the information of the menu entry: {}", updated);
         return updated;
+    }
+    
+    @Override
+    public Menu findRoot() {
+        
+        QMenu qMenu = QMenu.menu;
+        Predicate predicate = qMenu.type.eq("R");
+        
+        Menu menu = (Menu) repository.findOne(predicate);
+        log.debug("menu id : {}", menu.getId());
+        
+        return menu;
     }
 }

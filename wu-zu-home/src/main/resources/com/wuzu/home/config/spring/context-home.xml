@@ -9,5 +9,6 @@
   </context:component-scan>
   
   <import resource="classpath:com/wuzu/core/config/spring/context-core.xml" />
+  <import resource="classpath:com/wuzu/home/config/spring/context-dataSource.xml" />
   <import resource="classpath:com/wuzu/home/config/spring/context-jpa.xml" />
 </beans>

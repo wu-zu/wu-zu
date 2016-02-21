@@ -16,7 +16,7 @@
   </root>
   
   <!-- Application loggers -->
-  <logger name="com.wuzu.home" level="info" />
+  <logger name="com.wuzu.home" level="debug" />
   
   <!-- 3rd party loggers -->
   <logger name="org.springframework.core" level="info" />

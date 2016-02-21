@@ -22,7 +22,7 @@
 
 <script>
 $('#menu-tree').tree({
-    url : '<c:url value="/energy/menu" />',
+    url : '<c:url value="/energy/documents" />',
     method : 'get',
     loadFilter : function(data) {
         

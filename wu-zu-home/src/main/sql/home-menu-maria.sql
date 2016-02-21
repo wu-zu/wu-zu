@@ -10,23 +10,20 @@ DROP TABLE IF EXISTS MENU;
 CREATE TABLE MENU (
     ID INT NOT NULL AUTO_INCREMENT
   , NAME VARCHAR(20) NOT NULL
+  , TYPE CHAR(1) NOT NULL /* R(oot), B(ranch), L(eaf) */
+  , PARENT_ID INT NOT NULL
   
   , IS_OPENED BOOLEAN DEFAULT 0 /* TINYINT(1) */
   
   , PRIMARY KEY (ID)
 );
 
-/* CRUD */
-SELECT * FROM MENU;
-
-INSERT INTO MENU (NAME, IS_OPENED) VALUES 
-('file 1', 0),
-('file 2', 0),
-('folder 1', 1),
-('file 3', 0),
-('folder 2', 0)
+/* Initail data */
+INSERT INTO MENU (NAME, TYPE, PARENT_ID) VALUES
+('문서', 'R', 0)
 ;
 
-
+/* CRUD */
+SELECT * FROM MENU;
 
 COMMIT;

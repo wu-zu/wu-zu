@@ -1,7 +1,5 @@
 package com.wuzu.web.ui.menu.domain;
 
-import java.util.List;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -20,17 +18,22 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 public class Menu {
-
+    
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
-
-    @Column(name = "name",nullable = false,length = 30)
+    
+    @Column(name = "name", nullable = false, length = 30)
     private String name;
     
-//    private int parentId;
+    @Column(nullable = false, length = 1)
+    private String type;
+    
+    @Column(nullable = false)
+    private int parentId;
+    
 //    private List<Menu> children;
     
-    @Column(name = "is_opened",nullable = false)
+    @Column(name = "is_opened", nullable = false)
     private boolean isOpened;
 }
