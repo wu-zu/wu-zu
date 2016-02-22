@@ -1,4 +1,4 @@
-package com.wuzu.jpa.test;
+package com.wuzu.proto.test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -8,18 +8,13 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.mysema.query.types.Predicate;
-import com.wuzu.jpa.annotation.TransactionalDevTest;
+import com.wuzu.proto.annotation.TransactionalDevTest;
 import com.wuzu.web.ui.menu.domain.Menu;
-import com.wuzu.web.ui.menu.domain.QMenu;
 import com.wuzu.web.ui.menu.service.MenuService;
-
-import lombok.extern.slf4j.Slf4j;
 
 /**
  * @author Hyungchae Kim
  */
-@Slf4j
 @RunWith(SpringJUnit4ClassRunner.class)
 @TransactionalDevTest
 public class MenuCrudTest {
@@ -37,11 +32,11 @@ public class MenuCrudTest {
 
     @Test
     public void createTest() {
-        Menu menuVo = new Menu();
-        menuVo.setName("folder 3");
-        menuVo.setOpened(true);
+        Menu menu = new Menu();
+        menu.setName("folder 3");
+        menu.setOpened(true);
 
-        Menu rtnMenuVo = this.menuService.create(menuVo);
+        Menu rtnMenuVo = this.menuService.create(menu);
         assertThat(rtnMenuVo.getName()).isEqualTo("folder 3");
         assertThat(rtnMenuVo.isOpened()).isEqualTo(true);
 
@@ -72,22 +67,22 @@ public class MenuCrudTest {
     }
     @Test
     public void updateTest() {
-        Menu menuVo = new Menu();
-        menuVo.setId(1);
-        menuVo.setName("file 4");
-        menuVo.setOpened(true);
+        Menu menu = new Menu();
+        menu.setId(1);
+        menu.setName("file 4");
+        menu.setOpened(true);
 
-        Menu rtnMenuVo = this.menuService.update(menuVo);
+        Menu rtnMenu = this.menuService.update(menu);
 
-        assertThat(rtnMenuVo.getName()).isEqualTo("file 4");
-        assertThat(rtnMenuVo.isOpened()).isEqualTo(true);
+        assertThat(rtnMenu.getName()).isEqualTo("file 4");
+        assertThat(rtnMenu.isOpened()).isEqualTo(true);
     }
 
-    @Test
-    public void findAllQueryDslTest() {
-        QMenu qMenu = QMenu.menu;
-        Predicate predicate = qMenu.isOpened.eq(false);
-        Iterable<Menu> menuVos =  this.menuService.findAll(predicate);
-        assertThat(menuVos).isNotNull().hasSize(3);
-    }
+//    @Test
+//    public void findAllQueryDslTest() {
+//        QMenu qMenu = QMenu.menu;
+//        Predicate predicate = qMenu.isOpened.eq(false);
+//        Iterable<Menu> menuVos =  this.menuService.findAll(predicate);
+//        assertThat(menuVos).isNotNull().hasSize(3);
+//    }
 }

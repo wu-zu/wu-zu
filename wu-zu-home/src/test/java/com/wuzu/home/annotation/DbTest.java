@@ -1,4 +1,4 @@
-package com.wuzu.jpa.annotation;
+package com.wuzu.home.annotation;
 
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
@@ -15,8 +15,8 @@ import java.lang.annotation.Target;
  */
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
-@ContextConfiguration("/com/wuzu/spring/config/context-dev.xml")
+@ContextConfiguration("/com/wuzu/home/config/spring/context-home.xml")
 @ActiveProfiles("dev")
 @Transactional
-@Sql({"/com/wuzu/jpa/sql/create-db.sql","/com/wuzu/jpa/sql/insert-data.sql"})
-public @interface TransactionalDevTest {}
+@Sql({"/com/wuzu/home/sql/hsql/schema.sql","/com/wuzu/home/sql/hsql/init-data.sql"})
+public @interface DbTest {}

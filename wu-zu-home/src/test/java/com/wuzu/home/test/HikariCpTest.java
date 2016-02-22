@@ -1,29 +1,29 @@
-package com.wuzu.jpa.test;
+package com.wuzu.home.test;
 
-import com.wuzu.jpa.annotation.TransactionalDevTest;
+import static org.assertj.core.api.Assertions.assertThat;
+
+import javax.annotation.Resource;
+import javax.sql.DataSource;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.test.jdbc.JdbcTestUtils;
 
-import javax.annotation.Resource;
-import javax.sql.DataSource;
-
-import static org.assertj.core.api.Assertions.*;
+import com.wuzu.home.annotation.DbTest;
 
 /**
  * @author HyungChae Kim
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@TransactionalDevTest
-public class HikariTest {
+@DbTest
+public class HikariCpTest {
 
-    private JdbcTemplate jdbcTemplate;
-
-    @Resource(name = "hikariDataSource")
+    @Resource(name = "dataSource-hikari")
     private DataSource dataSource;
+    
+    private JdbcTemplate jdbcTemplate;
 
     @Before
     public void setUp() {
@@ -38,10 +38,5 @@ public class HikariTest {
     @Test
     public void jdbcTemplateIsNotNull() {
         assertThat(jdbcTemplate).isNotNull();
-    }
-
-    @Test
-    public void countRowsInMenuTable() {
-        assertThat(JdbcTestUtils.countRowsInTable(this.jdbcTemplate, "MENU")).isNotNull().isEqualTo(5);
     }
 }

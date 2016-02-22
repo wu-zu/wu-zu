@@ -12,4 +12,18 @@
   <packaging>jar</packaging>
   
   <name>WU-ZU's jpa prototype</name>
+  
+  <dependencies>
+    <!-- WU-ZU -->
+    <dependency>
+      <groupId>com.wu-zu</groupId>
+      <artifactId>wu-zu-core</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>com.wu-zu</groupId>
+      <artifactId>wu-zu-jpa</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+    </dependency>
+  </dependencies>
 </project>

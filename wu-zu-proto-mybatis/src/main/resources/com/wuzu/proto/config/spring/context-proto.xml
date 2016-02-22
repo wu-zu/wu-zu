@@ -7,7 +7,7 @@
 
   <context:component-scan base-package="com.wuzu.*" />
 
-  <context:property-placeholder location="classpath:app.properties" />
+  <context:property-placeholder location="classpath:proto.properties" />
 
   <import resource="context-mybatis.xml" />
 </beans>

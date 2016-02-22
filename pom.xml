@@ -12,6 +12,9 @@
     <module>wu-zu-mybatis</module>
     <module>wu-zu-proto-mybatis</module>
     
+    <module>wu-zu-jpa</module>
+    <module>wu-zu-proto-jpa</module>
+    
     <module>wu-zu-core-web</module>
     <module>wu-zu-home</module>
     
