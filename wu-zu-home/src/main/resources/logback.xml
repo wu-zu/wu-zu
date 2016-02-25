@@ -11,12 +11,12 @@
     </encoder>
   </appender>
   
-  <root level="error">
+  <root level="info">
     <appender-ref ref="STDOUT" />
   </root>
   
   <!-- Application loggers -->
-  <logger name="com.wuzu.home" level="debug" />
+  <logger name="com.wuzu" level="debug" />
   
   <!-- 3rd party loggers -->
   <logger name="org.springframework.core" level="info" />

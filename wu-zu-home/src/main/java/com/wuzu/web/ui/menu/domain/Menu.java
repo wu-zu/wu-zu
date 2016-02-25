@@ -11,10 +11,11 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * @author HyungChae Kim
+ * @author Hyungchae Kim
+ * @author Gahngha Ryu
  */
 @Entity
-@Table(name="menu")
+@Table
 @Data
 @NoArgsConstructor
 public class Menu {
@@ -23,17 +24,54 @@ public class Menu {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     
-    @Column(name = "name", nullable = false, length = 30)
+    @Column(nullable = false, length = 30)
     private String name;
-    
+
     @Column(nullable = false, length = 1)
     private String type;
     
     @Column(nullable = false)
     private int parentId;
     
+    /** Root에서 부터의 깊이, Root는 0 */
+    @Column(nullable = false)
+    private int depth;
+
+    /** 특정 depth내에서의 순서 */
+    @Column(nullable = false)
+    private int orderInDepth;
+    
+    @Column(nullable = false)
+    private String uri;
+    
 //    private List<Menu> children;
     
-    @Column(name = "is_opened", nullable = false)
+    
+    @Column(name = "IS_OPENED", nullable = false)
     private boolean isOpened;
+    
+    
+    public class Type {
+        
+        public static final String ROOT = "R";
+        public static final String BRANCH = "B";
+        public static final String LEAF = "L";
+    }
+    
+//    public enum Type {
+//        
+//        ROOT("R"), BRANCH("B"), LEAF("L");
+//        
+//        private String type;
+//        
+//        private Type(String type) {
+//            
+//            this.type = type;
+//        }
+//        
+//        public String value() {
+//
+//            return type;
+//        }
+//    }
 }

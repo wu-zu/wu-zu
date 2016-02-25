@@ -14,7 +14,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import com.wuzu.home.annotation.DbTest;
 
 /**
- * @author HyungChae Kim
+ * @author Hyungchae Kim
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @DbTest

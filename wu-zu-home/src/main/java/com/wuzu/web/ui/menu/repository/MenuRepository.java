@@ -10,4 +10,4 @@ import com.wuzu.web.ui.menu.domain.Menu;
  * @author Hyungchae Kim
  */
 @Repository
-public interface MenuRepository extends JpaRepository<Menu, Integer>, QueryDslPredicateExecutor {}
+public interface MenuRepository extends JpaRepository<Menu, Integer>, QueryDslPredicateExecutor<Menu> {}

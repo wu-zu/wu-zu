@@ -7,6 +7,7 @@ import com.wuzu.web.ui.menu.domain.Menu;
 
 /**
  * @author Hyungchae Kim
+ * @author Gahngha Ryu
  */
 public interface MenuService {
 
@@ -21,6 +22,8 @@ public interface MenuService {
     Menu findById(Integer id);
 
     Menu update(Menu menu);
+    
+    List<Menu> getMenus(int fromDepth, int toDepth);
     
     Menu findRoot();
 }

@@ -36,6 +36,9 @@
     </div>
   </div>
   <nav id="gnb">
+  <script>
+  	console.log('${menus}');
+  </script>
     <ul>
       <li><a href="${pageContext.request.contextPath}/wuzu">우주</a></li>
       <li><a href="${pageContext.request.contextPath}/wuzu-in">우주인</a></li>
