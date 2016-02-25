@@ -8,8 +8,10 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import com.mysema.query.types.Predicate;
 import com.wuzu.proto.annotation.TransactionalDevTest;
 import com.wuzu.web.ui.menu.domain.Menu;
+import com.wuzu.web.ui.menu.domain.QMenu;
 import com.wuzu.web.ui.menu.service.MenuService;
 
 /**
@@ -78,11 +80,11 @@ public class MenuCrudTest {
         assertThat(rtnMenu.isOpened()).isEqualTo(true);
     }
 
-//    @Test
-//    public void findAllQueryDslTest() {
-//        QMenu qMenu = QMenu.menu;
-//        Predicate predicate = qMenu.isOpened.eq(false);
-//        Iterable<Menu> menuVos =  this.menuService.findAll(predicate);
-//        assertThat(menuVos).isNotNull().hasSize(3);
-//    }
+    @Test
+    public void findAllQueryDslTest() {
+        QMenu qMenu = QMenu.menu;
+        Predicate predicate = qMenu.isOpened.eq(false);
+        Iterable<Menu> menuVos =  this.menuService.findAll(predicate);
+        assertThat(menuVos).isNotNull().hasSize(3);
+    }
 }
