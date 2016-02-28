@@ -37,7 +37,6 @@ public class Menu {
     @Column(nullable = false)
     private int depth;
 
-    /** 특정 depth내에서의 순서 */
     @Column(nullable = false)
     private int orderInDepth;
     
