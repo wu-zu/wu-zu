@@ -7,8 +7,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-import com.wuzu.web.ui.user.domain.User;
-
 import lombok.Data;
 
 /**
@@ -31,7 +29,7 @@ public class Article {
     private LocalDateTime writtenDateTime;
     
     // User
-    private User userId;
+    private int userId;
     
     // Board
     private int boardId;
