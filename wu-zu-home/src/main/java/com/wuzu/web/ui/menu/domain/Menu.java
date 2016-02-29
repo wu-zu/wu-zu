@@ -14,9 +14,9 @@ import lombok.NoArgsConstructor;
  * @author Hyungchae Kim
  * @author Gahngha Ryu
  */
+@Data
 @Entity
 @Table
-@Data
 @NoArgsConstructor
 public class Menu {
     
