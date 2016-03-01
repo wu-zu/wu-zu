@@ -1,9 +1,12 @@
 package com.wuzu.web.ui.board.domain;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 import lombok.Data;
 
@@ -25,5 +28,6 @@ public class Board {
     private String type;
     
     // Article
-//    private List<Article> articles;
+    @OneToMany(mappedBy="board")
+    private List<Article> articles;
 }
