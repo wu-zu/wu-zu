@@ -7,3 +7,5 @@
 3. Copy lombok.jar to ECLIPSE_HOME
 
 4. Project - Clean
+
+5. End
