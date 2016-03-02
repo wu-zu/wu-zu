@@ -20,5 +20,10 @@
       <artifactId>wu-zu-core</artifactId> <!-- TODO 추후 test에 의존하도록 변경 필요 -->
       <version>0.0.1-SNAPSHOT</version>
     </dependency>
+    <dependency>
+      <groupId>com.wu-zu</groupId>
+      <artifactId>wu-zu-core-web</artifactId> <!-- TODO 추후 test에 의존하도록 변경 필요 -->
+      <version>0.0.1-SNAPSHOT</version>
+    </dependency>
   </dependencies>
 </project>
