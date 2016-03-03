@@ -21,21 +21,21 @@
 </article>
 
 <script>
-$('#menu-tree').tree({
-    url : '<c:url value="/energy/documents" />',
-    method : 'get',
-    loadFilter : function(data) {
+// $('#menu-tree').tree({
+//     url : '<c:url value="/energy/documents" />',
+//     method : 'get',
+//     loadFilter : function(data) {
         
-        for (var i = 0; i < data.length; ++i) {
+//         for (var i = 0; i < data.length; ++i) {
             
-            var menu = data[i];
+//             var menu = data[i];
             
-            menu.text = menu.name;
-        }
+//             menu.text = menu.name;
+//         }
         
-        return data;
-    }
-});
+//         return data;
+//     }
+// });
 </script>
 
 </body>
