@@ -11,7 +11,7 @@
 <meta name="description" content="우주인들과 만날 수 있는 유일한 장소" />
 
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<!-- Place favicon.ico in the root directory -->
+<link rel="icon" type="image/x-icon" href="${pageContext.request.contextPath}/img/favicon.ico" />
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/normalize.css">
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/main.css">
 
