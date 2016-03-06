@@ -1,0 +1,16 @@
+description = "WU-ZU's jpa project"
+
+dependencies {
+    /* Spring Framework */
+    compile group: 'org.springframework.data', name: 'spring-data-jpa', version:'1.9.2.RELEASE'
+    
+    /* Hibernate */
+    compile group: 'org.hibernate', name: 'hibernate-core', version:'4.3.11.Final'
+    compile group: 'org.hibernate', name: 'hibernate-entitymanager', version:'4.3.11.Final'
+    
+    /* Querydsl */
+    compile group: 'com.mysema.querydsl', name: 'querydsl-core', version:'3.3.2'
+    compile group: 'com.mysema.querydsl', name: 'querydsl-apt', version:'3.3.2'
+    compile group: 'com.mysema.querydsl', name: 'querydsl-jpa', version:'3.3.2'
+    compile group: 'com.mysema.querydsl', name: 'querydsl-sql', version:'3.3.2'
+}

@@ -5,7 +5,7 @@
 
   <select id="selectAllMenus" resultType="Menu">
     /* 2016-02-03 | Gahngha Ryu | selectAllMenus */
-  
+    
     SELECT * FROM MENU
   </select>
 </mapper>

@@ -1,0 +1,7 @@
+description = "WU-ZU's jpa prototype project"
+
+dependencies {
+    /* WU-ZU */
+    compile project(':wu-zu-core')
+    compile project(':wu-zu-jpa')
+}

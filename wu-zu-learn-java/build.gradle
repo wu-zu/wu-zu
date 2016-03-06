@@ -1,0 +1,7 @@
+description = "WU-ZU's java learning test project"
+
+dependencies {
+    /* WU-ZU */
+    compile project(':wu-zu-core') // TODO 추후 test에 의존하도록 변경 필요
+    compile project(':wu-zu-core-web') // TODO 추후 test에 의존하도록 변경 필요
+}

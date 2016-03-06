@@ -1,0 +1,24 @@
+description = "WU-ZU's core web project"
+
+apply plugin: 'eclipse-wtp'
+
+dependencies {
+    /* WU-ZU */
+    compile project(':wu-zu-core')
+    
+    /* Servlet */
+    compile group: 'javax.servlet', name: 'javax.servlet-api', version:'3.1.0' // Project Facets의 Dynamic Web Module 버젼을 3.1로 설정
+    
+    /* EL */
+    compile(group: 'javax.servlet', name: 'jsp-api', version:'2.0') {
+        exclude(module: 'servlet-api') // 2.4
+    }
+    
+    /* JSTL */
+    compile group: 'org.apache.taglibs', name: 'taglibs-standard-spec', version:'1.2.5'
+    compile group: 'org.apache.taglibs', name: 'taglibs-standard-impl', version:'1.2.5'
+    
+    /* Spring Framework */
+    compile group: 'org.springframework', name: 'spring-web', version:'4.2.4.RELEASE' // ContextLoaderListener
+    compile group: 'org.springframework', name: 'spring-webmvc', version:'4.2.4.RELEASE' // DispatcherServlet
+}

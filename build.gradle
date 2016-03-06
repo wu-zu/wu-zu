@@ -1,0 +1,69 @@
+description = "WU-ZU's gradle build root project"
+
+allprojects  {
+    group = 'com.wu-zu'
+    version = '0.0.1-SNAPSHOT'
+}
+
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'eclipse'
+    
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+    
+    tasks.withType(JavaCompile) {
+        options.encoding = 'UTF-8'
+    }
+    
+    repositories {
+        mavenLocal()
+        maven { url "http://repo.maven.apache.org/maven2" }
+    }
+    
+    /* for Querydsl */
+    sourceSets {
+        generated {
+            java {
+                srcDirs = ['src/main/generated']
+            }
+        }
+    }
+    
+    task generateQuerydsl(type: JavaCompile, group: 'build') {
+        
+        source = sourceSets.main.java
+        classpath = configurations.compile
+        options.compilerArgs = [
+            '-proc:only',
+            '-processor', 'com.mysema.query.apt.jpa.JPAAnnotationProcessor'
+        ]
+        destinationDir = sourceSets.generated.java.srcDirs.iterator().next()
+    }
+    
+    compileJava {
+        dependsOn generateQuerydsl
+        source generateQuerydsl.destinationDir
+    }
+    
+    compileGeneratedJava {
+        dependsOn generateQuerydsl
+        //options.warnings = false
+        classpath += sourceSets.main.runtimeClasspath
+    }
+    
+    clean {
+        delete sourceSets.generated.java.srcDirs
+    }
+    /* /for Querydsl */
+    
+    /* for MyBatis */
+    sourceSets {
+        main {
+            resources {
+                srcDir "$projectDir/src/main/java"
+            }
+        }
+    }
+    /* /for MyBatis */
+}

@@ -1,0 +1,24 @@
+description = "WU-ZU's home project : Wep application"
+
+apply plugin: 'war'
+apply plugin: 'eclipse-wtp'
+
+eclipse {
+    classpath {
+        downloadSources = true
+    }
+    wtp {
+        facet {
+            facet name: 'jst.web', version: '3.1'
+            facet name: 'jst.java', version: '1.8'
+        }
+    }
+}
+
+dependencies {
+    /* WU-ZU */
+    compile project(':wu-zu-core-web')
+    
+    /* Template engine */
+    compile group: 'org.sitemesh', name: 'sitemesh', version:'3.0.1'
+}

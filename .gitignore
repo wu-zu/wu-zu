@@ -2,14 +2,18 @@
 .project
 .classpath
 .settings
+bin
 
 # IntelliJ IDEA
 *.idea
 *.iml
 
-
 # Maven
 target
+
+# Gradle
+.gradle
+build
 
 # Spring
 .springBeans

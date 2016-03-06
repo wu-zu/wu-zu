@@ -1,0 +1,21 @@
+rootProject.name = 'wu-zu'
+
+include ':wu-zu-core'
+include ':wu-zu-mybatis'
+include ':wu-zu-proto-mybatis'
+include ':wu-zu-jpa'
+include ':wu-zu-proto-jpa'
+include ':wu-zu-core-web'
+include ':wu-zu-home'
+include ':wu-zu-learn-java'
+include ':wu-zu-learn-spring'
+
+project(':wu-zu-core').projectDir = "$rootDir/wu-zu-core" as File
+project(':wu-zu-mybatis').projectDir = "$rootDir/wu-zu-mybatis" as File
+project(':wu-zu-proto-mybatis').projectDir = "$rootDir/wu-zu-proto-mybatis" as File
+project(':wu-zu-jpa').projectDir = "$rootDir/wu-zu-jpa" as File
+project(':wu-zu-proto-jpa').projectDir = "$rootDir/wu-zu-proto-jpa" as File
+project(':wu-zu-core-web').projectDir = "$rootDir/wu-zu-core-web" as File
+project(':wu-zu-home').projectDir = "$rootDir/wu-zu-home" as File
+project(':wu-zu-learn-java').projectDir = "$rootDir/wu-zu-learn-java" as File
+project(':wu-zu-learn-spring').projectDir = "$rootDir/wu-zu-learn-spring" as File
