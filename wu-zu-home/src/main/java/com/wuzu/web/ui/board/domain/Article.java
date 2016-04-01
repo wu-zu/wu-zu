@@ -1,18 +1,14 @@
 package com.wuzu.web.ui.board.domain;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.Lob;
-import javax.persistence.ManyToOne;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
-
-import com.wuzu.web.ui.user.domain.User;
+import javax.persistence.OneToMany;
 
 import lombok.Data;
 
@@ -28,21 +24,21 @@ public class Article {
     private int id;
     
     @Column(nullable = false, length = 30)
+    private String nickname;
+    
+    @Column(nullable = false, length = 100)
+    private String password;
+    
+    @Column(nullable = false, length = 30)
     private String title;
     
     @Lob
     @Column(nullable = false)
     private String content;
-   
-    private LocalDateTime writtenDateTime;
     
-    // User
-    @ManyToOne
-    @JoinColumn(name="USER_ID")
-    private User user;
+	@Column(nullable = false)
+    private LocalDateTime addDate;
     
-    // Board
-    @ManyToOne
-    @JoinColumn(name="BOARD_ID")
-    private Board board;
+    @OneToMany(mappedBy="article")
+    private List<Comment> comments;
 }
